@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetaCerta - Alcance seus objetivos financeiros</title>
+    <meta name="description" content="O app de finanças que te ajuda a criar metas de depósitos e poupar dinheiro de forma inteligente e visual.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <span class="logo-icon"></span>
+                MetaCerta
+            </div>
+            <nav class="nav-links">
+                <a href="#funcionalidades">Funcionalidades</a>
+                <a href="#metas">Metas</a>
+                <a href="#deposito">Como Funciona</a>
+            </nav>
+            <a href="#download" class="btn btn-primary nav-btn">Baixar App</a>
+            <button class="mobile-menu-btn" aria-label="Menu" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#funcionalidades">Funcionalidades</a>
+        <a href="#metas">Metas</a>
+        <a href="#deposito">Como Funciona</a>
+        <a href="#download" class="btn btn-primary">Baixar App</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text" data-animate="fade-up">
+                <div class="badge">Novo App de Finanças</div>
+                <h1>Alcance seus sonhos, <br><span class="highlight">um depósito por vez.</span></h1>
+                <p>Crie metas personalizadas, faça depósitos acompanhando o seu progresso visualmente e alcance sua estabilidade financeira mais rápido do que você imagina.</p>
+                <div class="hero-buttons">
+                    <a href="#download" class="btn btn-primary btn-large">Começar Agora</a>
+                    <a href="#metas" class="btn btn-secondary btn-large">Ver Metas Comuns</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper" data-animate="fade-left">
+                <div class="glow-effect"></div>
+                <img src="assets/mockup.png" alt="Interface do App MetaCerta mostrando o progresso de uma meta de poupança" class="hero-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Funcionalidades -->
+    <section id="funcionalidades" class="features section">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <h2>Tudo o que você precisa para <span class="highlight">guardar dinheiro</span></h2>
+                <p>Nossas funcionalidades foram desenhadas para manter você motivado a fazer depósitos.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card glass-panel" data-animate="fade-up" data-delay="100">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Crie Metas Claras</h3>
+                    <p>Defina o valor, o prazo e dê um nome para o seu sonho. O app calculará automaticamente quanto você precisa depositar.</p>
+                </div>
+                <div class="feature-card glass-panel" data-animate="fade-up" data-delay="200">
+                    <div class="feature-icon">💸</div>
+                    <h3>Faça Depósitos</h3>
+                    <p>Registre cada depósito de forma simples e rápida. Acompanhe o anel de progresso se preenchendo a cada contribuição.</p>
+                </div>
+                <div class="feature-card glass-panel" data-animate="fade-up" data-delay="300">
+                    <div class="feature-icon">📈</div>
+                    <h3>Acompanhe o Progresso</h3>
+                    <p>Visualize gráficos incríveis que mostram o quanto falta para você conquistar a sua meta. Celebre pequenas vitórias.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metas Pré-definidas -->
+    <section id="metas" class="goals section">
+        <div class="container">
+            <div class="section-header text-center" data-animate="fade-up">
+                <h2>Comece com <span class="highlight">Metas Pré-definidas</span></h2>
+                <p>Não sabe por onde começar? Escolha uma de nossas metas e comece a poupar em um clique.</p>
+            </div>
+
+            <div class="goals-grid">
+                <!-- Card Meta 1 -->
+                <div class="goal-card glass-panel" data-animate="zoom-in" data-delay="100">
+                    <div class="goal-header">
+                        <span class="goal-emoji">🏖️</span>
+                        <h4>Viagem dos Sonhos</h4>
+                    </div>
+                    <div class="goal-progress-wrapper">
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 45%;"></div>
+                        </div>
+                        <div class="goal-stats">
+                            <span>45% concluído</span>
+                            <span>R$ 4.500 / R$ 10.000</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline btn-full">Começar esta meta</button>
+                </div>
+
+                <!-- Card Meta 2 -->
+                <div class="goal-card glass-panel" data-animate="zoom-in" data-delay="200">
+                    <div class="goal-header">
+                        <span class="goal-emoji">🚨</span>
+                        <h4>Reserva de Emergência</h4>
+                    </div>
+                    <div class="goal-progress-wrapper">
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 15%;"></div>
+                        </div>
+                        <div class="goal-stats">
+                            <span>15% concluído</span>
+                            <span>R$ 1.500 / R$ 10.000</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline btn-full">Começar esta meta</button>
+                </div>
+
+                <!-- Card Meta 3 -->
+                <div class="goal-card glass-panel" data-animate="zoom-in" data-delay="300">
+                    <div class="goal-header">
+                        <span class="goal-emoji">🚗</span>
+                        <h4>Carro Novo</h4>
+                    </div>
+                    <div class="goal-progress-wrapper">
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 60%;"></div>
+                        </div>
+                        <div class="goal-stats">
+                            <span>60% concluído</span>
+                            <span>R$ 30.000 / R$ 50.000</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline btn-full">Começar esta meta</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA -->
+    <section id="download" class="cta section">
+        <div class="container">
+            <div class="cta-box glass-panel" data-animate="fade-up">
+                <div class="cta-content">
+                    <h2>Pronto para assumir o controle?</h2>
+                    <p>Baixe o aplicativo agora e faça o primeiro depósito rumo aos seus objetivos financeiros.</p>
+                    <div class="store-buttons">
+                        <button class="store-btn">
+                            <span class="store-icon">🍎</span>
+                            <div class="store-text">
+                                <span>Baixar na</span>
+                                <strong>App Store</strong>
+                            </div>
+                        </button>
+                        <button class="store-btn">
+                            <span class="store-icon">▶️</span>
+                            <div class="store-text">
+                                <span>Disponível no</span>
+                                <strong>Google Play</strong>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-icon"></span>
+                    MetaCerta
+                </div>
+                <p>O jeito mais inteligente e visual de alcançar suas metas através de pequenos depósitos.</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>Produto</h4>
+                    <a href="#funcionalidades">Funcionalidades</a>
+                    <a href="#metas">Metas</a>
+                    <a href="#">Preços</a>
+                </div>
+                <div class="link-column">
+                    <h4>Empresa</h4>
+                    <a href="#">Sobre Nós</a>
+                    <a href="#">Carreiras</a>
+                    <a href="#">Contato</a>
+                </div>
+                <div class="link-column">
+                    <h4>Legal</h4>
+                    <a href="#">Termos de Uso</a>
+                    <a href="privacy.html">Privacidade</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 MetaCerta. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
