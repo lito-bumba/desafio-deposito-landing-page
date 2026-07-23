@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
        SCROLL SPY (Highlight active nav link)
     ==============================================
     */
-    const spySections = document.querySelectorAll('section[id]');
+    const spySections = document.querySelectorAll('section[id], footer[id]');
     const navLinksList = document.querySelectorAll('.nav-links a, .mobile-menu a');
 
     const spyObserver = new IntersectionObserver((entries) => {
