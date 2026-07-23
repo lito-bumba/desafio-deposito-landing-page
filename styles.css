@@ -552,6 +552,14 @@ h2 {
     object-fit: contain;
 }
 
+.store-btn img[alt="Apple Logo"] {
+    filter: brightness(0) invert(1);
+}
+
+.logo:hover {
+    opacity: 0.9;
+}
+
 .store-text {
     text-align: left;
 }
