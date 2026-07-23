@@ -241,8 +241,22 @@ h2 {
     transition: var(--transition);
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
     color: var(--primary);
+}
+
+.mobile-menu a.active {
+    color: var(--primary);
+}
+
+/* Acessibilidade - Estados de Foco */
+.nav-links a:focus-visible,
+.mobile-menu a:focus-visible,
+.btn:focus-visible,
+.logo:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 4px;
 }
 
 .mobile-menu-btn {

@@ -83,4 +83,35 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+
+    /* 
+    ==============================================
+       SCROLL SPY (Highlight active nav link)
+    ==============================================
+    */
+    const spySections = document.querySelectorAll('section[id]');
+    const navLinksList = document.querySelectorAll('.nav-links a, .mobile-menu a');
+
+    const spyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                navLinksList.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href === `#${id}` || href === `index.html#${id}`) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+        });
+    }, {
+        root: null,
+        rootMargin: '-30% 0px -60% 0px', // Trigger active state when section occupies the main screen area
+        threshold: 0
+    });
+
+    spySections.forEach(section => spyObserver.observe(section));
 });
