@@ -39,11 +39,25 @@ document.addEventListener('DOMContentLoaded', () => {
     */
     const navbar = document.querySelector('.navbar');
     
+    const navLinksList = document.querySelectorAll('.nav-links a, .mobile-menu a');
+    
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
+        }
+
+        // Se chegou no final da página (limite físico do scroll), ativa o menu "Sobre"
+        if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 50) {
+            navLinksList.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === '#sobre' || href === 'index.html#sobre') {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
         }
     });
 
@@ -91,7 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
     ==============================================
     */
     const spySections = document.querySelectorAll('section[id], footer[id]');
-    const navLinksList = document.querySelectorAll('.nav-links a, .mobile-menu a');
 
     const spyObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
