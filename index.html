@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MetaCerta - Alcance seus objetivos financeiros</title>
+    <title>Desafio Depósito - Alcance seus objetivos financeiros</title>
     <meta name="description" content="O app de finanças que te ajuda a criar metas de depósitos e poupar dinheiro de forma inteligente e visual.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,13 +15,13 @@
     <header class="navbar">
         <div class="container nav-content">
             <a href="#" class="logo">
-                <span class="logo-icon"></span>
-                MetaCerta
+                <img src="assets/app_icon.png" alt="Desafio Depósito Logo" class="logo-img">
+                Desafio Depósito
             </a>
             <nav class="nav-links">
                 <a href="#funcionalidades">Funcionalidades</a>
-                <a href="#metas">Metas</a>
-                <a href="#precos">Preços</a>
+                <a href="#precos">Planos</a>
+                <a href="#contato">Fale Connosco</a>
                 <a href="#sobre">Sobre</a>
             </nav>
             <a href="#download" class="btn btn-primary nav-btn">Baixar App</a>
@@ -36,27 +36,81 @@
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu" id="mobile-menu">
         <a href="#funcionalidades">Funcionalidades</a>
-        <a href="#metas">Metas</a>
-        <a href="#precos">Preços</a>
+        <a href="#precos">Planos</a>
+        <a href="#contato">Fale Connosco</a>
         <a href="#sobre">Sobre</a>
         <a href="#download" class="btn btn-primary">Baixar App</a>
     </div>
 
     <!-- Hero Section -->
     <section id="inicio" class="hero">
-        <div class="container hero-content">
-            <div class="hero-text" data-animate="fade-up">
-                <div class="badge">Novo App de Finanças</div>
-                <h1>Alcance seus sonhos, <br><span class="highlight">um depósito por vez.</span></h1>
-                <p>Crie metas personalizadas, faça depósitos acompanhando o seu progresso visualmente e alcance sua estabilidade financeira mais rápido do que você imagina.</p>
-                <div class="hero-buttons">
-                    <a href="#download" class="btn btn-primary btn-large">Começar Agora</a>
-                    <a href="#metas" class="btn btn-secondary btn-large">Ver Metas Comuns</a>
+        <div class="container hero-content" data-animate="fade-up">
+            <div class="hero-carousel" id="hero-carousel">
+                <div class="hero-slides">
+                    <!-- Slide 1 -->
+                    <div class="hero-slide active">
+                        <div class="hero-text">
+                            <h1>Alcance seus sonhos, <br><span class="highlight">um depósito por vez.</span></h1>
+                            <p>Crie metas personalizadas, faça depósitos acompanhando o seu progresso visualmente e alcance sua estabilidade financeira mais rápido do que você imagina.</p>
+                            <div class="hero-buttons">
+                                <a href="#download" class="btn btn-primary btn-large btn-comecar-agora" id="btn-comecar-agora">Começar Agora</a>
+                                <a href="#funcionalidades" class="btn btn-secondary btn-large">Ver Recursos</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="hero-slide">
+                        <div class="hero-text">
+                            <h1>Transforme economia em hábito <br><span class="highlight">com desafios diários.</span></h1>
+                            <p>Desafios inteligentes de 52 semanas, envelopes digitais e metas guiadas para você guardar dinheiro com facilidade e disciplina.</p>
+                            <div class="hero-buttons">
+                                <a href="#download" class="btn btn-primary btn-large btn-comecar-agora">Baixar o App</a>
+                                <a href="#funcionalidades" class="btn btn-secondary btn-large">Como Funciona</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="hero-slide">
+                        <div class="hero-text">
+                            <h1>Sua reserva de emergência <br><span class="highlight">construída sem complicação.</span></h1>
+                            <p>Diga adeus às planilhas complexas. Acompanhe cada depósito crescer em tempo real e conquiste a tranquilidade financeira que você merece.</p>
+                            <div class="hero-buttons">
+                                <a href="#download" class="btn btn-primary btn-large btn-comecar-agora">Começar Desafio</a>
+                                <a href="#funcionalidades" class="btn btn-secondary btn-large">Ver Recursos</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="hero-slide">
+                        <div class="hero-text">
+                            <h1>Pequenos depósitos, <br><span class="highlight">grandes conquistas.</span></h1>
+                            <p>Comece com o que tem hoje. Defina seu próprio ritmo de depósitos e veja a consistência transformar seus planos em realidade.</p>
+                            <div class="hero-buttons">
+                                <a href="#download" class="btn btn-primary btn-large btn-comecar-agora">Instalar Agora</a>
+                                <a href="#precos" class="btn btn-secondary btn-large">Conhecer Planos</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="hero-image-wrapper" data-animate="fade-left">
-                <div class="glow-effect"></div>
-                <img src="assets/mockup.png" alt="Interface do App MetaCerta mostrando o progresso de uma meta de poupança" class="hero-image">
+
+                <!-- Carousel Controls -->
+                <div class="hero-carousel-controls">
+                    <button class="carousel-arrow prev" id="hero-prev" aria-label="Slide anterior">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </button>
+                    <div class="carousel-dots" id="hero-dots">
+                        <button class="dot active" data-slide="0" aria-label="Slide 1"></button>
+                        <button class="dot" data-slide="1" aria-label="Slide 2"></button>
+                        <button class="dot" data-slide="2" aria-label="Slide 3"></button>
+                        <button class="dot" data-slide="3" aria-label="Slide 4"></button>
+                    </div>
+                    <button class="carousel-arrow next" id="hero-next" aria-label="Próximo slide">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
@@ -64,19 +118,23 @@
     <!-- Funcionalidades -->
     <section id="funcionalidades" class="features section">
         <div class="container">
-            <div class="section-header" data-animate="fade-up">
+            <div class="section-header text-center" data-animate="fade-up">
                 <h2>Tudo o que você precisa para <span class="highlight">guardar dinheiro</span></h2>
                 <p>Nossas funcionalidades foram desenhadas para manter você motivado a fazer depósitos.</p>
             </div>
             
             <div class="features-grid">
                 <div class="feature-card glass-panel" data-animate="fade-up" data-delay="100">
-                    <div class="feature-icon">🎯</div>
+                    <div class="feature-icon">
+                        <img src="assets/feature_icon_1.png" alt="Crie Metas Claras">
+                    </div>
                     <h3>Crie Metas Claras</h3>
                     <p>Defina o valor, o prazo e dê um nome para o seu sonho. O app calculará automaticamente quanto você precisa depositar.</p>
                 </div>
                 <div class="feature-card glass-panel" data-animate="fade-up" data-delay="200">
-                    <div class="feature-icon">💸</div>
+                    <div class="feature-icon">
+                        <img src="assets/feature_icon_2.png" alt="Faça Depósitos">
+                    </div>
                     <h3>Faça Depósitos</h3>
                     <p>Registre cada depósito de forma simples e rápida. Acompanhe o anel de progresso se preenchendo a cada contribuição.</p>
                 </div>
@@ -89,71 +147,7 @@
         </div>
     </section>
 
-    <!-- Metas Pré-definidas -->
-    <section id="metas" class="goals section">
-        <div class="container">
-            <div class="section-header text-center" data-animate="fade-up">
-                <h2>Comece com <span class="highlight">Metas Pré-definidas</span></h2>
-                <p>Não sabe por onde começar? Escolha uma de nossas metas e comece a poupar em um clique.</p>
-            </div>
 
-            <div class="goals-grid">
-                <!-- Card Meta 1 -->
-                <div class="goal-card glass-panel" data-animate="zoom-in" data-delay="100">
-                    <div class="goal-header">
-                        <span class="goal-emoji">🏖️</span>
-                        <h4>Viagem dos Sonhos</h4>
-                    </div>
-                    <div class="goal-progress-wrapper">
-                        <div class="progress-bar-bg">
-                            <div class="progress-bar-fill" style="width: 45%;"></div>
-                        </div>
-                        <div class="goal-stats">
-                            <span>45% concluído</span>
-                            <span>R$ 4.500 / R$ 10.000</span>
-                        </div>
-                    </div>
-                    <button class="btn btn-outline btn-full">Começar esta meta</button>
-                </div>
-
-                <!-- Card Meta 2 -->
-                <div class="goal-card glass-panel" data-animate="zoom-in" data-delay="200">
-                    <div class="goal-header">
-                        <span class="goal-emoji">🚨</span>
-                        <h4>Reserva de Emergência</h4>
-                    </div>
-                    <div class="goal-progress-wrapper">
-                        <div class="progress-bar-bg">
-                            <div class="progress-bar-fill" style="width: 15%;"></div>
-                        </div>
-                        <div class="goal-stats">
-                            <span>15% concluído</span>
-                            <span>R$ 1.500 / R$ 10.000</span>
-                        </div>
-                    </div>
-                    <button class="btn btn-outline btn-full">Começar esta meta</button>
-                </div>
-
-                <!-- Card Meta 3 -->
-                <div class="goal-card glass-panel" data-animate="zoom-in" data-delay="300">
-                    <div class="goal-header">
-                        <span class="goal-emoji">🚗</span>
-                        <h4>Carro Novo</h4>
-                    </div>
-                    <div class="goal-progress-wrapper">
-                        <div class="progress-bar-bg">
-                            <div class="progress-bar-fill" style="width: 60%;"></div>
-                        </div>
-                        <div class="goal-stats">
-                            <span>60% concluído</span>
-                            <span>R$ 30.000 / R$ 50.000</span>
-                        </div>
-                    </div>
-                    <button class="btn btn-outline btn-full">Começar esta meta</button>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Preços -->
     <section id="precos" class="pricing section">
@@ -175,45 +169,48 @@
                         <li><span class="check-icon">✓</span> 1 Meta de depósito ativa</li>
                         <li><span class="check-icon">✓</span> Lembretes manuais</li>
                         <li><span class="check-icon">✓</span> Acompanhamento básico</li>
+                        <li><span class="check-icon">✓</span> Versão com anúncios</li>
                         <li class="disabled"><span class="check-icon">✕</span> Metas compartilhadas</li>
                         <li class="disabled"><span class="check-icon">✕</span> Gráficos avançados</li>
                     </ul>
-                    <a href="#download" class="btn btn-secondary btn-full">Começar Agora</a>
+                    <a href="#download" class="btn btn-secondary btn-full btn-comecar-agora">Começar Agora</a>
                 </div>
 
-                <!-- Plano Pro -->
+                <!-- Plano Premium -->
                 <div class="pricing-card glass-panel popular" data-animate="fade-up" data-delay="200">
                     <div class="popular-badge">Mais Escolhido</div>
                     <div class="pricing-header">
-                        <h3>Pro</h3>
+                        <h3>Premium</h3>
                         <p class="pricing-desc">O empurrão perfeito para seus objetivos.</p>
                         <div class="price">R$ 9,90<span>/mês</span></div>
                     </div>
                     <ul class="pricing-features">
                         <li><span class="check-icon">✓</span> Metas ativas ilimitadas</li>
+                        <li><span class="check-icon">✓</span> 100% Sem anúncios</li>
                         <li><span class="check-icon">✓</span> Lembretes inteligentes</li>
                         <li><span class="check-icon">✓</span> Gráficos de evolução detalhados</li>
                         <li><span class="check-icon">✓</span> Tags e categorias para metas</li>
                         <li class="disabled"><span class="check-icon">✕</span> Metas compartilhadas</li>
                     </ul>
-                    <a href="#download" class="btn btn-primary btn-full">Experimentar Grátis</a>
+                    <a href="#download" class="btn btn-primary btn-full btn-comecar-agora">Experimentar Grátis</a>
                 </div>
 
-                <!-- Plano Premium -->
+                <!-- Plano Premium Mais -->
                 <div class="pricing-card glass-panel" data-animate="fade-up" data-delay="300">
                     <div class="pricing-header">
-                        <h3>Premium</h3>
+                        <h3>Premium Mais</h3>
                         <p class="pricing-desc">Para metas em família ou em conjunto.</p>
                         <div class="price">R$ 19,90<span>/mês</span></div>
                     </div>
                     <ul class="pricing-features">
-                        <li><span class="check-icon">✓</span> Tudo do plano Pro</li>
+                        <li><span class="check-icon">✓</span> Tudo do plano Premium</li>
+                        <li><span class="check-icon">✓</span> Totalmente sem anúncios</li>
                         <li><span class="check-icon">✓</span> Metas Compartilhadas (Casal/Família)</li>
                         <li><span class="check-icon">✓</span> Backup automático na nuvem</li>
                         <li><span class="check-icon">✓</span> Priorização inteligente de metas</li>
                         <li><span class="check-icon">✓</span> Suporte prioritário 24/7</li>
                     </ul>
-                    <a href="#download" class="btn btn-secondary btn-full">Assinar Premium</a>
+                    <a href="#download" class="btn btn-secondary btn-full btn-comecar-agora">Assinar Premium Mais</a>
                 </div>
             </div>
         </div>
@@ -224,26 +221,40 @@
         <div class="container">
             <div class="cta-box glass-panel" data-animate="fade-up">
                 <div class="cta-content">
-                    <h2>Pronto para assumir o controle?</h2>
-                    <p>Baixe o aplicativo agora e faça o primeiro depósito rumo aos seus objetivos financeiros.</p>
+                    <p class="cta-text">Baixe o aplicativo agora e faça o primeiro depósito <span class="highlight">rumo aos seus objetivos financeiros.</span></p>
                     <div class="store-buttons">
-                        <button class="store-btn">
+                        <a href="https://www.apple.com/br/app-store/" target="_blank" rel="noopener noreferrer" class="store-btn store-btn-apple">
                             <img src="assets/apple_logo.png" alt="Apple Logo" class="store-icon-img">
                             <div class="store-text">
                                 <span>Baixar na</span>
                                 <strong>App Store</strong>
                             </div>
-                        </button>
-                        <button class="store-btn">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.desafio.deposito" target="_blank" rel="noopener noreferrer" class="store-btn store-btn-google">
                             <img src="assets/play_logo.png" alt="Google Play Logo" class="store-icon-img">
                             <div class="store-text">
                                 <span>Disponível no</span>
                                 <strong>Google Play</strong>
                             </div>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Fale Connosco -->
+    <section id="contato" class="contact section">
+        <div class="container contact-simple-content" data-animate="fade-up">
+            <h2>Fale <span class="highlight">Connosco</span></h2>
+            <p class="contact-simple-desc">Tem dúvidas, sugestões ou precisa de ajuda? Entre em contacto connosco:</p>
+            <a href="mailto:geral@desafiodeposito.com" class="contact-email-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+                <span>geral@desafiodeposito.com</span>
+            </a>
         </div>
     </section>
 
@@ -252,8 +263,8 @@
         <div class="container footer-content">
             <div class="footer-brand">
                 <a href="#" class="logo">
-                    <span class="logo-icon"></span>
-                    MetaCerta
+                    <img src="assets/app_icon.png" alt="Desafio Depósito Logo" class="logo-img">
+                    Desafio Depósito
                 </a>
                 <p>O jeito mais inteligente e visual de alcançar suas metas através de pequenos depósitos.</p>
             </div>
@@ -261,24 +272,18 @@
                 <div class="link-column">
                     <h4>Produto</h4>
                     <a href="#funcionalidades">Funcionalidades</a>
-                    <a href="#metas">Metas</a>
-                    <a href="#precos">Preços</a>
-                </div>
-                <div class="link-column">
-                    <h4>Empresa</h4>
-                    <a href="#">Sobre Nós</a>
-                    <a href="#">Carreiras</a>
-                    <a href="#">Contato</a>
+                    <a href="#precos">Planos</a>
+                    <a href="#contato">Fale Connosco</a>
                 </div>
                 <div class="link-column">
                     <h4>Legal</h4>
-                    <a href="#">Termos de Uso</a>
+                    <a href="/terms/">Termos de Uso</a>
                     <a href="/privacy/">Privacidade</a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom container">
-            <p>&copy; 2026 MetaCerta. Todos os direitos reservados.</p>
+            <p>&copy; 2026 Desafio Depósito. Todos os direitos reservados.</p>
         </div>
     </footer>
 

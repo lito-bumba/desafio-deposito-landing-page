@@ -127,4 +127,142 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     spySections.forEach(section => spyObserver.observe(section));
+
+    /* 
+    ==============================================
+       HERO CAROUSEL
+    ==============================================
+    */
+    const carousel = document.getElementById('hero-carousel');
+    if (carousel) {
+        const slides = carousel.querySelectorAll('.hero-slide');
+        const dots = carousel.querySelectorAll('.carousel-dots .dot');
+        const prevBtn = document.getElementById('hero-prev');
+        const nextBtn = document.getElementById('hero-next');
+        let currentSlide = 0;
+        let slideInterval = null;
+        const autoPlayDelay = 6000;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            const nextIndex = (currentSlide + 1) % slides.length;
+            showSlide(nextIndex);
+        }
+
+        function prevSlide() {
+            const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(prevIndex);
+        }
+
+        function startAutoplay() {
+            stopAutoplay();
+            slideInterval = setInterval(nextSlide, autoPlayDelay);
+        }
+
+        function stopAutoplay() {
+            if (slideInterval) {
+                clearInterval(slideInterval);
+                slideInterval = null;
+            }
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                startAutoplay();
+            });
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                startAutoplay();
+            });
+        }
+
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                showSlide(i);
+                startAutoplay();
+            });
+        });
+
+        carousel.addEventListener('mouseenter', stopAutoplay);
+        carousel.addEventListener('mouseleave', startAutoplay);
+
+        // Touch swipe support for mobile devices
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carousel.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            stopAutoplay();
+        }, { passive: true });
+
+        carousel.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            const swipeDistance = touchEndX - touchStartX;
+            if (Math.abs(swipeDistance) > 40) {
+                if (swipeDistance < 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+            }
+            startAutoplay();
+        }, { passive: true });
+
+        startAutoplay();
+    }
+
+    /* 
+    ==============================================
+       SMART REDIRECT ("Começar Agora")
+    ==============================================
+    */
+    const comecarButtons = document.querySelectorAll('#btn-comecar-agora, .btn-comecar-agora');
+
+    comecarButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const ua = navigator.userAgent || '';
+            const isAndroid = /Android/i.test(ua);
+            const isIOS = /iPhone|iPad/i.test(ua);
+
+            if (isAndroid) {
+                e.preventDefault();
+                window.location.href = 'https://play.google.com/store/apps/details?id=com.desafio.deposito';
+            } else if (isIOS) {
+                e.preventDefault();
+                window.location.href = 'https://www.apple.com/br/app-store/';
+            } else {
+                e.preventDefault();
+                const downloadSection = document.getElementById('download');
+                if (downloadSection) {
+                    downloadSection.scrollIntoView({ behavior: 'smooth' });
+                    history.pushState(null, '', '#download');
+                } else {
+                    window.location.hash = '#download';
+                }
+            }
+        });
+    });
 });
