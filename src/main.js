@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', (e) => {
             const ua = navigator.userAgent || '';
             const isAndroid = /Android/i.test(ua);
-            const isIOS = /iPhone|iPad/i.test(ua);
+            const isIOS = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 
             if (isAndroid) {
                 e.preventDefault();
