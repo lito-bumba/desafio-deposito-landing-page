@@ -265,4 +265,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Se o usuário acessar a raiz com parâmetros ?app, ?download ou hash #app / #comecar
+    const searchParams = new URLSearchParams(window.location.search);
+    if (searchParams.has('app') || searchParams.has('download') || window.location.hash === '#app' || window.location.hash === '#comecar') {
+        const ua = navigator.userAgent || '';
+        const isAndroid = /Android/i.test(ua);
+        const isIOS = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
+        if (isAndroid) {
+            window.location.replace('https://play.google.com/store/apps/details?id=com.desafio.deposito');
+        } else if (isIOS) {
+            window.location.replace('https://www.apple.com/br/app-store/');
+        } else {
+            const downloadSection = document.getElementById('download');
+            if (downloadSection) {
+                downloadSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }
 });
