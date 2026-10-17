@@ -1,0 +1,7 @@
+# robots.txt para Desafio Depósito
+User-agent: *
+Allow: /
+Disallow: /app/
+
+# Sitemap Oficial
+Sitemap: https://desafiodeposito.com/sitemap.xml

@@ -38,28 +38,29 @@ document.addEventListener('DOMContentLoaded', () => {
     ==============================================
     */
     const navbar = document.querySelector('.navbar');
-    
     const navLinksList = document.querySelectorAll('.nav-links a, .mobile-menu a');
     
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
 
-        // Se chegou no final da página (limite físico do scroll), ativa o menu "Sobre"
-        if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 50) {
-            navLinksList.forEach(link => {
-                const href = link.getAttribute('href');
-                if (href === '#sobre' || href === 'index.html#sobre') {
-                    link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                }
-            });
-        }
-    });
+            // Se chegou no final da página (limite físico do scroll), ativa o menu "Sobre"
+            if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 50) {
+                navLinksList.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href === '#sobre' || href === 'index.html#sobre') {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+        });
+    }
 
 
     /* 
@@ -69,34 +70,37 @@ document.addEventListener('DOMContentLoaded', () => {
     */
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
-    const mobileLinks = mobileMenu.querySelectorAll('a');
 
-    function toggleMenu() {
-        mobileMenu.classList.toggle('active');
-        
-        // Animate hamburger icon
-        const spans = mobileMenuBtn.querySelectorAll('span');
-        if (mobileMenu.classList.contains('active')) {
-            spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-            spans[1].style.opacity = '0';
-            spans[2].style.transform = 'rotate(-45deg) translate(7px, -8px)';
-        } else {
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
-        }
-    }
+    if (mobileMenuBtn && mobileMenu) {
+        const mobileLinks = mobileMenu.querySelectorAll('a');
 
-    mobileMenuBtn.addEventListener('click', toggleMenu);
-
-    // Close menu when clicking a link
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
+        function toggleMenu() {
+            mobileMenu.classList.toggle('active');
+            
+            // Animate hamburger icon
+            const spans = mobileMenuBtn.querySelectorAll('span');
             if (mobileMenu.classList.contains('active')) {
-                toggleMenu();
+                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(7px, -8px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
             }
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+
+        // Close menu when clicking a link
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (mobileMenu.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
         });
-    });
+    }
 
 
     /* 

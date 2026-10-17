@@ -1,0 +1,30 @@
+# Desafio Depósito
+
+> O Desafio Depósito é o aplicativo brasileiro de finanças pessoais e economia visual para Android e iOS que ajuda usuários a guardarem dinheiro, cumprirem o desafio das 52 semanas, criarem envelopes digitais e construírem reserva de emergência através de metas de depósitos inteligentes.
+
+## Sobre o Aplicativo
+- **Nome Oficial:** Desafio Depósito
+- **Categoria:** Finanças Pessoais / Economia e Poupança (`FinanceApplication`)
+- **Idioma:** Português (pt-BR)
+- **Plataformas:** Android (Google Play) e iOS (Apple App Store)
+- **Site Oficial:** https://desafiodeposito.com/
+- **Contato Oficial:** geral@desafiodeposito.com
+
+## Principais Funcionalidades
+- **Criação de Metas Claras:** Defina valor alvo, prazo e nome do objetivo (Viagem, Reserva de Emergência, Carro Novo, Desafio 52 Semanas). O app calcula automaticamente quanto depositar.
+- **Desafios de Depósito e Envelopes Digitais:** Controle visual de pequenos depósitos diários, semanais ou mensais com anel de progresso interativo.
+- **Gráficos de Evolução:** Acompanhamento em tempo real do saldo acumulado e do percentual concluído de cada meta financeira.
+- **Metas Compartilhadas:** Planejamento financeiro em conjunto para casais e famílias.
+- **Privacidade e Segurança:** Não exige conexão bancária nem senhas de banco; funciona como um planejador e rastreador dedicado de metas de poupança.
+
+## Planos e Preços
+- **Plano Gratuito (R$ 0/sempre):** 1 meta de depósito ativa, lembretes manuais, acompanhamento básico.
+- **Plano Premium (R$ 9,90/mês):** Metas ativas ilimitadas, 100% sem anúncios, lembretes inteligentes, gráficos detalhados, tags e categorias.
+- **Plano Premium Mais (R$ 19,90/mês):** Tudo do plano Premium, metas compartilhadas (casal/família), backup automático na nuvem, priorização inteligente de metas e suporte prioritário 24/7.
+
+## Links Oficiais
+- [Página Inicial](https://desafiodeposito.com/)
+- [Baixar no Google Play (Android)](https://play.google.com/store/apps/details?id=com.desafio.deposito)
+- [Baixar na App Store (iOS)](https://www.apple.com/br/app-store/)
+- [Termos de Uso](https://desafiodeposito.com/terms/)
+- [Política de Privacidade](https://desafiodeposito.com/privacy/)

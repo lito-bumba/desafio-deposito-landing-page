@@ -3,27 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio Depósito - Alcance seus objetivos financeiros</title>
-    <meta name="description" content="O app de finanças que te ajuda a criar metas de depósitos e poupar dinheiro de forma inteligente e visual.">
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="apple-touch-icon" href="/favicon.png">
+    <title>Desafio Depósito - App para Guardar Dinheiro e Criar Metas Financeiras</title>
+    <meta name="description" content="O app de finanças e economia que ajuda você a criar metas de depósitos, poupar dinheiro e construir sua reserva financeira com desafios visuais inteligentes.">
+    <meta name="keywords" content="desafio deposito, guardar dinheiro, app para economizar, metas financeiras, reserva de emergencia, poupar dinheiro, desafio 52 semanas, app de financas">
+    <link rel="canonical" href="https://desafiodeposito.com/">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Desafio Depósito - App para Guardar Dinheiro e Criar Metas Financeiras">
+    <meta property="og:description" content="Crie metas de depósitos, acompanhe seu progresso visualmente e alcance sua estabilidade financeira com o app Desafio Depósito.">
+    <meta property="og:url" content="https://desafiodeposito.com/">
+    <meta property="og:site_name" content="Desafio Depósito">
+    <meta property="og:image" content="https://desafiodeposito.com/app_icon.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:alt" content="Logotipo do Desafio Depósito">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Desafio Depósito - App para Guardar Dinheiro e Criar Metas">
+    <meta name="twitter:description" content="Crie metas de depósitos, acompanhe seu progresso visualmente e poupe dinheiro com disciplina.">
+    <meta name="twitter:image" content="https://desafiodeposito.com/app_icon.png">
+
+    <!-- Mobile & PWA -->
+    <meta name="theme-color" content="#F1F5F9">
+    <meta name="apple-mobile-web-app-title" content="Desafio Depósito">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/favicon.png">
+    <link rel="manifest" href="/manifest.webmanifest">
+
+    <!-- Fonts & Styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/style.css">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://desafiodeposito.com/#website",
+          "url": "https://desafiodeposito.com/",
+          "name": "Desafio Depósito",
+          "description": "Aplicativo para criar metas de depósitos e poupar dinheiro de forma inteligente e visual.",
+          "inLanguage": "pt-BR",
+          "publisher": {
+            "@id": "https://desafiodeposito.com/#organization"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://desafiodeposito.com/#app",
+          "name": "Desafio Depósito",
+          "operatingSystem": "iOS, Android",
+          "applicationCategory": "FinanceApplication",
+          "applicationSubCategory": "PersonalFinanceApplication",
+          "inLanguage": "pt-BR",
+          "countriesSupported": "BR",
+          "description": "O aplicativo que ajuda você a criar metas de depósitos, poupar dinheiro e alcançar seus objetivos financeiros de forma inteligente e visual.",
+          "image": "https://desafiodeposito.com/app_icon.png",
+          "featureList": [
+            "Criação de metas financeiras personalizadas",
+            "Desafio das 52 semanas para guardar dinheiro",
+            "Envelopes digitais e reserva de emergência",
+            "Anel de progresso visual e gráficos de evolução",
+            "Metas compartilhadas para casal e família",
+            "Lembretes inteligentes de depósitos"
+          ],
+          "publisher": {
+            "@id": "https://desafiodeposito.com/#organization"
+          },
+          "offers": {
+            "@type": "AggregateOffer",
+            "lowPrice": "0",
+            "highPrice": "19.90",
+            "priceCurrency": "BRL",
+            "offerCount": "3",
+            "offers": [
+              {
+                "@type": "Offer",
+                "name": "Plano Gratuito",
+                "price": "0",
+                "priceCurrency": "BRL"
+              },
+              {
+                "@type": "Offer",
+                "name": "Plano Premium",
+                "price": "9.90",
+                "priceCurrency": "BRL"
+              },
+              {
+                "@type": "Offer",
+                "name": "Plano Premium Mais",
+                "price": "19.90",
+                "priceCurrency": "BRL"
+              }
+            ]
+          },
+          "installUrl": [
+            "https://play.google.com/store/apps/details?id=com.desafio.deposito",
+            "https://www.apple.com/br/app-store/"
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://desafiodeposito.com/#organization",
+          "name": "Desafio Depósito",
+          "url": "https://desafiodeposito.com/",
+          "logo": "https://desafiodeposito.com/app_icon.png",
+          "email": "geral@desafiodeposito.com",
+          "sameAs": [
+            "https://play.google.com/store/apps/details?id=com.desafio.deposito"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://desafiodeposito.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "O que é o Desafio Depósito?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "O Desafio Depósito é um aplicativo de finanças e economia pessoal projetado para transformar o hábito de guardar dinheiro em uma jornada simples, visual e motivadora. Você define seus objetivos e acompanha cada progresso através de depósitos constantes."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Como funciona o desafio de guardar dinheiro?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Basta escolher o seu objetivo (como Viagem, Reserva de Emergência ou Desafio das 52 Semanas), definir o valor total e o prazo. O app calcula os depósitos necessários para você atingir a meta no seu próprio ritmo."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "O aplicativo é gratuito?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sim! Você pode começar no plano Gratuito com metas ativas e acompanhamento essencial. Caso queira metas ilimitadas, experiência sem anúncios e backup na nuvem, oferecemos os planos Premium e Premium Mais."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "O Desafio Depósito está disponível para iPhone e Android?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sim, o aplicativo está disponível tanto na Google Play Store para Android quanto na Apple App Store para iOS."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Preciso conectar minha conta bancária?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não. Não solicitamos senhas bancárias e não movimentamos seu dinheiro diretamente. O aplicativo atua como o seu organizador e motivador de metas e depósitos."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <!-- Navbar -->
     <header class="navbar">
         <div class="container nav-content">
-            <a href="#" class="logo">
-                <img src="assets/app_icon.png" alt="Desafio Depósito Logo" class="logo-img">
+            <a href="/" class="logo">
+                <img src="assets/app_icon.png" alt="Desafio Depósito Logo" class="logo-img" width="40" height="40" fetchpriority="high">
                 Desafio Depósito
             </a>
-            <nav class="nav-links">
+            <nav class="nav-links" aria-label="Navegação Principal">
                 <a href="#funcionalidades">Funcionalidades</a>
                 <a href="#precos">Planos</a>
-                <a href="#contato">Fale Connosco</a>
+                <a href="#faq">Dúvidas</a>
+                <a href="#contato">Fale Conosco</a>
                 <a href="#sobre">Sobre</a>
             </nav>
             <a href="#download" class="btn btn-primary nav-btn btn-comecar-agora">Baixar App</a>
@@ -39,11 +203,13 @@
     <div class="mobile-menu" id="mobile-menu">
         <a href="#funcionalidades">Funcionalidades</a>
         <a href="#precos">Planos</a>
-        <a href="#contato">Fale Connosco</a>
+        <a href="#faq">Dúvidas</a>
+        <a href="#contato">Fale Conosco</a>
         <a href="#sobre">Sobre</a>
         <a href="#download" class="btn btn-primary btn-comecar-agora">Baixar App</a>
     </div>
 
+    <main>
     <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="container hero-content" data-animate="fade-up">
@@ -52,8 +218,11 @@
                     <!-- Slide 1 -->
                     <div class="hero-slide active">
                         <div class="hero-text">
-                            <h1>Alcance seus sonhos, <br><span class="highlight">um depósito por vez.</span></h1>
-                            <p>Crie metas personalizadas, faça depósitos acompanhando o seu progresso visualmente e alcance sua estabilidade financeira mais rápido do que você imagina.</p>
+                            <h1 class="hero-title">
+                                <span class="badge">Desafio Depósito • App para Guardar Dinheiro</span>
+                                Alcance seus sonhos, <br><span class="highlight">um depósito por vez.</span>
+                            </h1>
+                            <p>Com o <strong>Desafio Depósito</strong>, você cria metas financeiras personalizadas, acompanha o seu progresso visualmente e guarda dinheiro para alcançar sua estabilidade financeira mais rápido do que imagina.</p>
                             <div class="hero-buttons">
                                 <a href="#download" class="btn btn-primary btn-large btn-comecar-agora" id="btn-comecar-agora">Começar Agora</a>
                                 <a href="#funcionalidades" class="btn btn-secondary btn-large">Ver Recursos</a>
@@ -64,7 +233,10 @@
                     <!-- Slide 2 -->
                     <div class="hero-slide">
                         <div class="hero-text">
-                            <h1>Transforme economia em hábito <br><span class="highlight">com desafios diários.</span></h1>
+                            <h2 class="hero-title">
+                                <span class="badge">Desafio das 52 Semanas e Envelopes Digitais</span>
+                                Transforme economia em hábito <br><span class="highlight">com desafios diários.</span>
+                            </h2>
                             <p>Desafios inteligentes de 52 semanas, envelopes digitais e metas guiadas para você guardar dinheiro com facilidade e disciplina.</p>
                             <div class="hero-buttons">
                                 <a href="#download" class="btn btn-primary btn-large btn-comecar-agora">Baixar o App</a>
@@ -76,7 +248,10 @@
                     <!-- Slide 3 -->
                     <div class="hero-slide">
                         <div class="hero-text">
-                            <h1>Sua reserva de emergência <br><span class="highlight">construída sem complicação.</span></h1>
+                            <h2 class="hero-title">
+                                <span class="badge">Planejador de Reserva de Emergência</span>
+                                Sua reserva de emergência <br><span class="highlight">construída sem complicação.</span>
+                            </h2>
                             <p>Diga adeus às planilhas complexas. Acompanhe cada depósito crescer em tempo real e conquiste a tranquilidade financeira que você merece.</p>
                             <div class="hero-buttons">
                                 <a href="#download" class="btn btn-primary btn-large btn-comecar-agora">Começar Desafio</a>
@@ -88,7 +263,10 @@
                     <!-- Slide 4 -->
                     <div class="hero-slide">
                         <div class="hero-text">
-                            <h1>Pequenos depósitos, <br><span class="highlight">grandes conquistas.</span></h1>
+                            <h2 class="hero-title">
+                                <span class="badge">Metas Financeiras no Seu Ritmo</span>
+                                Pequenos depósitos, <br><span class="highlight">grandes conquistas.</span>
+                            </h2>
                             <p>Comece com o que tem hoje. Defina seu próprio ritmo de depósitos e veja a consistência transformar seus planos em realidade.</p>
                             <div class="hero-buttons">
                                 <a href="#download" class="btn btn-primary btn-large btn-comecar-agora">Instalar Agora</a>
@@ -122,30 +300,30 @@
         <div class="container">
             <div class="section-header text-center" data-animate="fade-up">
                 <h2>Tudo o que você precisa para <span class="highlight">guardar dinheiro</span></h2>
-                <p>Nossas funcionalidades foram desenhadas para manter você motivado a fazer depósitos.</p>
+                <p>As funcionalidades do <strong>Desafio Depósito</strong> foram desenhadas para manter você motivado a poupar e atingir cada objetivo financeiro.</p>
             </div>
             
             <div class="features-grid">
                 <div class="feature-card glass-panel" data-animate="fade-up" data-delay="100">
                     <div class="feature-icon">
-                        <img src="assets/feature_icon_1.png" alt="Crie Metas Claras">
+                        <img src="assets/feature_icon_1.png" alt="Crie Metas Claras de Depósitos e Reserva de Emergência" width="80" height="80" loading="lazy" decoding="async">
                     </div>
                     <h3>Crie Metas Claras</h3>
-                    <p>Defina o valor, o prazo e dê um nome para o seu sonho. O app calculará automaticamente quanto você precisa depositar.</p>
+                    <p>Defina o valor, o prazo e dê um nome para o seu sonho — como uma viagem, reserva de emergência ou carro novo. O app calcula automaticamente quanto você precisa depositar.</p>
                 </div>
                 <div class="feature-card glass-panel" data-animate="fade-up" data-delay="200">
                     <div class="feature-icon">
-                        <img src="assets/feature_icon_2.png" alt="Faça Depósitos">
+                        <img src="assets/feature_icon_2.png" alt="Faça Depósitos Diários, Semanais e Desafio 52 Semanas" width="80" height="80" loading="lazy" decoding="async">
                     </div>
                     <h3>Faça Depósitos</h3>
-                    <p>Registre cada depósito de forma simples e rápida. Acompanhe o anel de progresso se preenchendo a cada contribuição.</p>
+                    <p>Registre cada depósito de forma simples, crie envelopes digitais ou siga o desafio de 52 semanas. Acompanhe o anel de progresso se preenchendo a cada contribuição.</p>
                 </div>
                 <div class="feature-card glass-panel" data-animate="fade-up" data-delay="300">
                     <div class="feature-icon">
-                        <img src="assets/feature_icon_3.jpg" alt="Acompanhe o Progresso">
+                        <img src="assets/feature_icon_3.jpg" alt="Acompanhe o Progresso Financeiro com Gráficos" width="80" height="80" loading="lazy" decoding="async">
                     </div>
                     <h3>Acompanhe o Progresso</h3>
-                    <p>Visualize gráficos incríveis que mostram o quanto falta para você conquistar a sua meta. Celebre pequenas vitórias.</p>
+                    <p>Visualize gráficos incríveis que mostram sua evolução financeira e o quanto falta para conquistar a sua meta. Celebre cada conquista rumo aos seus objetivos.</p>
                 </div>
             </div>
         </div>
@@ -220,22 +398,79 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section id="faq" class="faq section">
+        <div class="container">
+            <div class="section-header text-center" data-animate="fade-up">
+                <h2>Perguntas <span class="highlight">Frequentes</span></h2>
+                <p>Tire suas dúvidas sobre como o Desafio Depósito te ajuda a poupar dinheiro com facilidade.</p>
+            </div>
+            <div class="faq-accordion" data-animate="fade-up">
+                <details class="faq-item glass-panel">
+                    <summary class="faq-question">
+                        <span>O que é o Desafio Depósito?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>O Desafio Depósito é um aplicativo de finanças e economia pessoal projetado para transformar o hábito de guardar dinheiro em uma jornada simples, visual e motivadora. Você define seus objetivos e acompanha cada progresso através de depósitos constantes.</p>
+                    </div>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary class="faq-question">
+                        <span>Como funciona o desafio de guardar dinheiro?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Basta escolher o seu objetivo (como Viagem, Reserva de Emergência ou Desafio das 52 Semanas), definir o valor total e o prazo. O app calcula os depósitos necessários para você atingir a meta no seu próprio ritmo.</p>
+                    </div>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary class="faq-question">
+                        <span>O aplicativo é gratuito?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Sim! Você pode começar no plano Gratuito com metas ativas e acompanhamento essencial. Caso queira metas ilimitadas, experiência sem anúncios e backup na nuvem, oferecemos os planos Premium e Premium Mais.</p>
+                    </div>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary class="faq-question">
+                        <span>O Desafio Depósito está disponível para iPhone e Android?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Sim, o aplicativo está disponível tanto na Google Play Store para Android quanto na Apple App Store para iOS.</p>
+                    </div>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary class="faq-question">
+                        <span>Preciso conectar minha conta bancária?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Não. Não solicitamos senhas bancárias e não movimentamos seu dinheiro diretamente. O aplicativo atua como o seu organizador e motivador de metas e depósitos.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
     <!-- Download CTA -->
     <section id="download" class="cta section">
         <div class="container">
             <div class="cta-box glass-panel" data-animate="fade-up">
                 <div class="cta-content">
-                    <p class="cta-text">Baixe o aplicativo agora e faça o primeiro depósito <span class="highlight">rumo aos seus objetivos financeiros.</span></p>
+                    <p class="cta-text">Baixe o aplicativo <strong>Desafio Depósito</strong> agora e faça o primeiro depósito <span class="highlight">rumo aos seus objetivos financeiros.</span></p>
                     <div class="store-buttons">
                         <a href="https://www.apple.com/br/app-store/" target="_blank" rel="noopener noreferrer" class="store-btn store-btn-apple">
-                            <img src="assets/apple_logo.png" alt="Apple Logo" class="store-icon-img">
+                            <img src="assets/apple_logo.png" alt="Apple Logo" class="store-icon-img" width="24" height="24" loading="lazy" decoding="async">
                             <div class="store-text">
                                 <span>Baixar na</span>
                                 <strong>App Store</strong>
                             </div>
                         </a>
                         <a href="https://play.google.com/store/apps/details?id=com.desafio.deposito" target="_blank" rel="noopener noreferrer" class="store-btn store-btn-google">
-                            <img src="assets/play_logo.png" alt="Google Play Logo" class="store-icon-img">
+                            <img src="assets/play_logo.png" alt="Google Play Logo" class="store-icon-img" width="24" height="24" loading="lazy" decoding="async">
                             <div class="store-text">
                                 <span>Disponível no</span>
                                 <strong>Google Play</strong>
@@ -247,11 +482,11 @@
         </div>
     </section>
 
-    <!-- Fale Connosco -->
+    <!-- Fale Conosco -->
     <section id="contato" class="contact section">
         <div class="container contact-simple-content" data-animate="fade-up">
-            <h2>Fale <span class="highlight">Connosco</span></h2>
-            <p class="contact-simple-desc">Tem dúvidas, sugestões ou precisa de ajuda? Entre em contacto connosco:</p>
+            <h2>Fale <span class="highlight">Conosco</span></h2>
+            <p class="contact-simple-desc">Tem dúvidas, sugestões ou precisa de ajuda? Entre em contato conosco:</p>
             <a href="mailto:geral@desafiodeposito.com" class="contact-email-badge">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <rect width="20" height="16" x="2" y="4" rx="2"></rect>
@@ -261,13 +496,14 @@
             </a>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer id="sobre" class="footer">
         <div class="container footer-content">
             <div class="footer-brand">
-                <a href="#" class="logo">
-                    <img src="assets/app_icon.png" alt="Desafio Depósito Logo" class="logo-img">
+                <a href="/" class="logo">
+                    <img src="assets/app_icon.png" alt="Desafio Depósito Logo" class="logo-img" width="40" height="40" loading="lazy" decoding="async">
                     Desafio Depósito
                 </a>
                 <p>O jeito mais inteligente e visual de alcançar suas metas através de pequenos depósitos.</p>
@@ -277,7 +513,8 @@
                     <h4>Produto</h4>
                     <a href="#funcionalidades">Funcionalidades</a>
                     <a href="#precos">Planos</a>
-                    <a href="#contato">Fale Connosco</a>
+                    <a href="#faq">Dúvidas Frequentes</a>
+                    <a href="#contato">Fale Conosco</a>
                 </div>
                 <div class="link-column">
                     <h4>Legal</h4>
