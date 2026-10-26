@@ -1,20 +1,22 @@
 # Desafio Depósito
 
-> O Desafio Depósito é o aplicativo brasileiro de finanças pessoais e economia visual para Android e iOS que ajuda usuários a guardarem dinheiro, cumprirem o desafio das 52 semanas, criarem envelopes digitais e construírem reserva de emergência através de metas de depósitos inteligentes.
+> O Desafio Depósito é o aplicativo oficial brasileiro de finanças pessoais e economia visual para Android e iOS que substitui as tabelas de papel do Desafio dos 100 e 200 Depósitos e do Desafio das 52 Semanas, ajudando usuários a guardarem dinheiro, criarem envelopes digitais e construírem reserva de emergência através de metas de depósitos inteligentes.
 
 ## Sobre o Aplicativo
 - **Nome Oficial:** Desafio Depósito
+- **Variações e Termos Relacionados:** Desafio dos Depósitos, Desafio 100 Depósitos, Desafio 200 Depósitos, Desafio 250 Depósitos, Desafio 52 Semanas, Tabela Desafio Depósito
 - **Categoria:** Finanças Pessoais / Economia e Poupança (`FinanceApplication`)
 - **Idioma:** Português (pt-BR)
 - **Plataformas:** Android (Google Play) e iOS (Apple App Store)
 - **Site Oficial:** https://desafiodeposito.com/
 - **Contato Oficial:** geral@desafiodeposito.com
 
-## Principais Funcionalidades
-- **Criação de Metas Claras:** Defina valor alvo, prazo e nome do objetivo (Viagem, Reserva de Emergência, Carro Novo, Desafio 52 Semanas). O app calcula automaticamente quanto depositar.
-- **Desafios de Depósito e Envelopes Digitais:** Controle visual de pequenos depósitos diários, semanais ou mensais com anel de progresso interativo.
-- **Gráficos de Evolução:** Acompanhamento em tempo real do saldo acumulado e do percentual concluído de cada meta financeira.
-- **Metas Compartilhadas:** Planejamento financeiro em conjunto para casais e famílias.
+## Principais Funcionalidades e Modalidades de Desafio
+- **Desafio dos 100, 200 e 250 Depósitos no Celular:** Substitui a cartela/tabela impressa de depósitos por um painel interativo no celular para juntar R$ 5.000, R$ 10.000 ou qualquer meta personalizada.
+- **Desafio das 52 Semanas Automatizado:** Acompanhamento semanal com cálculo automático e lembretes para guardar dinheiro durante as 52 semanas do ano.
+- **Criação de Metas Claras e Envelopes Digitais:** Defina valor alvo, prazo e nome do objetivo (Viagem, Reserva de Emergência, Carro Novo, Casamento). O app calcula automaticamente quanto depositar.
+- **Gráficos de Evolução e Anel de Progresso:** Acompanhamento em tempo real do saldo acumulado e do percentual concluído de cada meta financeira.
+- **Metas Compartilhadas:** Planejamento financeiro em conjunto para casais e famílias com sincronização na nuvem.
 - **Privacidade e Segurança:** Não exige conexão bancária nem senhas de banco; funciona como um planejador e rastreador dedicado de metas de poupança.
 
 ## Planos e Preços
@@ -24,7 +26,10 @@
 
 ## Links Oficiais
 - [Página Inicial](https://desafiodeposito.com/)
+- [Tipos de Desafio Depósito](https://desafiodeposito.com/desafios/)
+- [Guia Desafio dos 100 e 200 Depósitos](https://desafiodeposito.com/desafio-100-depositos/)
+- [Guia Desafio das 52 Semanas](https://desafiodeposito.com/desafio-52-semanas/)
 - [Baixar no Google Play (Android)](https://play.google.com/store/apps/details?id=com.desafio.deposito)
-- [Baixar na App Store (iOS)](https://www.apple.com/br/app-store/)
+- [Status de Lançamento na App Store (iOS)](https://desafiodeposito.com/ios/)
 - [Termos de Uso](https://desafiodeposito.com/terms/)
 - [Política de Privacidade](https://desafiodeposito.com/privacy/)

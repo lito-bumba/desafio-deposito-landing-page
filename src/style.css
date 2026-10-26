@@ -967,7 +967,8 @@ h2 {
     box-shadow: 0 8px 30px rgba(22, 163, 74, 0.12);
 }
 
-.popular-badge {
+.popular-badge,
+.soon-badge {
     position: absolute;
     top: -15px;
     left: 50%;
@@ -981,6 +982,12 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     box-shadow: 0 4px 12px var(--primary-glow);
+    white-space: nowrap;
+}
+
+.soon-badge {
+    background-color: #64748B;
+    box-shadow: 0 4px 12px rgba(100, 116, 139, 0.25);
 }
 
 .pricing-header {
@@ -1125,4 +1132,343 @@ h2 {
         font-size: 0.95rem;
     }
 }
+
+/* 
+==============================================
+   DEFERRED RENDERING (Below-the-fold CWV)
+==============================================
+*/
+.section-deferred {
+    content-visibility: auto;
+    contain-intrinsic-size: auto none auto 650px;
+}
+
+/* 
+==============================================
+   CHALLENGES & COMPARISON TABLE SECTION
+==============================================
+*/
+.challenges.section {
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+.challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 64px;
+}
+
+.challenge-card {
+    padding: 36px 28px;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+}
+
+.challenge-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(22, 163, 74, 0.35);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.challenge-tag {
+    display: inline-block;
+    width: fit-content;
+    padding: 4px 12px;
+    border-radius: 50px;
+    background-color: rgba(22, 163, 74, 0.1);
+    color: var(--primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 16px;
+}
+
+.challenge-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.challenge-card p {
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.challenge-highlights {
+    list-style: none;
+    border-top: 1px solid var(--glass-border);
+    padding-top: 16px;
+}
+
+.challenge-highlights li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.925rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+.challenge-highlights li:last-child {
+    margin-bottom: 0;
+}
+
+.challenge-highlights .check-icon {
+    color: var(--primary);
+}
+
+.comparison-block {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.comparison-title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: 28px;
+}
+
+.table-wrapper {
+    overflow: auto;
+    max-inline-size: 100%;
+    max-block-size: min(560px, 80vh);
+    container-type: inline-size;
+    border-radius: 20px;
+}
+
+.table-wrapper:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 4px;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: left;
+}
+
+.comparison-table thead {
+    position: sticky;
+    inset-block-start: 0;
+    z-index: 1;
+    background: #F8FAFC;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--glass-border);
+    font-size: 0.975rem;
+}
+
+.comparison-table thead th {
+    font-weight: 800;
+    color: var(--text-main);
+    background: #F8FAFC;
+}
+
+.comparison-table thead th:nth-child(2) {
+    color: var(--primary);
+}
+
+.comparison-table tbody th {
+    position: sticky;
+    inset-inline-start: 0;
+    background: #FFFFFF;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.comparison-table tbody tr:last-child th,
+.comparison-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.comparison-table .col-app {
+    font-weight: 600;
+    color: var(--text-main);
+    background: rgba(22, 163, 74, 0.03);
+}
+
+.comparison-table .col-app .check-icon {
+    color: var(--primary);
+    margin-right: 6px;
+}
+
+.comparison-table .col-paper {
+    color: var(--text-muted);
+}
+
+@container (width < 600px) {
+    .comparison-table,
+    .comparison-table thead,
+    .comparison-table tbody,
+    .comparison-table tr,
+    .comparison-table th,
+    .comparison-table td {
+        display: block;
+    }
+
+    .comparison-table thead {
+        display: none;
+    }
+
+    .comparison-table tr {
+        margin-block-end: 1rem;
+        border: 1px solid var(--glass-border);
+        border-radius: 14px;
+        overflow: hidden;
+    }
+
+    .comparison-table tbody th {
+        position: sticky;
+        inset-block-start: 0;
+        z-index: 2;
+        background: #F8FAFC;
+        padding: 14px 18px;
+    }
+
+    .comparison-table td {
+        padding: 12px 18px;
+    }
+
+    .comparison-table {
+        --label-1: "Recurso";
+        --label-2: "App Desafio Depósito";
+        --label-3: "Tabela de Papel / Planilha";
+    }
+
+    .comparison-table td:nth-child(2)::before {
+        content: var(--label-2) ": ";
+        font-weight: 800;
+        color: var(--primary);
+        display: block;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+    }
+
+    .comparison-table td:nth-child(3)::before {
+        content: var(--label-3) ": ";
+        font-weight: 700;
+        color: var(--text-muted);
+        display: block;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+    }
+
+    .comparison-table.sim-table-4col {
+        --label-2: "Valores";
+        --label-3: "Acumulado / Última";
+        --label-4: "Destaque";
+    }
+
+    .comparison-table.sim-table-4col td:nth-child(4)::before {
+        content: var(--label-4) ": ";
+        font-weight: 700;
+        color: var(--text-muted);
+        display: block;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+    }
+}
+
+/* 
+==============================================
+   CHALLENGE CARD LINKS & SATELLITE GUIDE PAGES
+==============================================
+*/
+.challenge-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--primary);
+    transition: var(--transition);
+}
+
+.challenge-card-link:hover {
+    color: var(--primary-hover);
+    transform: translateX(4px);
+}
+
+.guide-hero {
+    padding: 48px 0 40px 0;
+}
+
+.breadcrumb {
+    margin-bottom: 24px;
+}
+
+.breadcrumb ol {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.breadcrumb li + li::before {
+    content: "/";
+    margin-right: 8px;
+    color: #94A3B8;
+}
+
+.breadcrumb a {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.guide-hero-box {
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.guide-lead {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    line-height: 1.65;
+    margin: 0 auto 32px auto;
+    max-width: 740px;
+}
+
+.guide-steps-section {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.guide-table-section {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.guide-table-subtitle {
+    color: var(--text-muted);
+    margin-bottom: 28px;
+    font-size: 1.05rem;
+}
+
+.inline-brand-link {
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+
 

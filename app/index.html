@@ -18,7 +18,7 @@
             if (isAndroid) {
                 window.location.replace('https://play.google.com/store/apps/details?id=com.desafio.deposito');
             } else if (isIOS) {
-                window.location.replace('https://www.apple.com/br/app-store/');
+                window.location.replace('/ios/');
             } else {
                 window.location.replace('/#download');
             }
@@ -138,8 +138,8 @@
             dynamicBtn.href = 'https://play.google.com/store/apps/details?id=com.desafio.deposito';
             dynamicBtn.textContent = 'Abrir no Google Play';
         } else if (isIOS) {
-            dynamicBtn.href = 'https://www.apple.com/br/app-store/';
-            dynamicBtn.textContent = 'Abrir na App Store';
+            dynamicBtn.href = '/ios/';
+            dynamicBtn.textContent = 'Ver Status na App Store';
         } else {
             dynamicBtn.href = '/#download';
             dynamicBtn.textContent = 'Ver Opções de Download';

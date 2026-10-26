@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.href = 'https://play.google.com/store/apps/details?id=com.desafio.deposito';
             } else if (isIOS) {
                 e.preventDefault();
-                window.location.href = 'https://www.apple.com/br/app-store/';
+                window.location.href = '/ios/';
             } else {
                 e.preventDefault();
                 const downloadSection = document.getElementById('download');
@@ -280,7 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isAndroid) {
             window.location.replace('https://play.google.com/store/apps/details?id=com.desafio.deposito');
         } else if (isIOS) {
-            window.location.replace('https://www.apple.com/br/app-store/');
+            window.location.replace('/ios/');
         } else {
             const downloadSection = document.getElementById('download');
             if (downloadSection) {

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Depósito para iPhone (iOS) — Em Revisão na App Store</title>
+    <meta name="description" content="A versão para iOS (iPhone e iPad) do aplicativo Desafio Depósito está em fase final de revisão na Apple App Store. Saiba mais ou peça para ser avisado no lançamento.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://desafiodeposito.com/ios/">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/favicon.png">
+    <meta name="theme-color" content="#F1F5F9">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+    <style>
+        .ios-status-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 32px 0;
+        }
+
+        .ios-main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 48px 24px;
+        }
+
+        .ios-content {
+            max-width: 680px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .ios-icon-wrap {
+            position: relative;
+            width: 84px;
+            height: 84px;
+            margin: 0 auto 24px auto;
+        }
+
+        .ios-app-logo {
+            width: 84px;
+            height: 84px;
+            border-radius: 22px;
+            object-fit: cover;
+            box-shadow: 0 8px 24px rgba(22, 163, 74, 0.2);
+        }
+
+        .ios-apple-badge {
+            position: absolute;
+            bottom: -6px;
+            right: -6px;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: #0F172A;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--bg-main);
+            box-shadow: 0 4px 10px rgba(15, 23, 42, 0.15);
+        }
+
+        .ios-apple-badge img {
+            width: 16px;
+            height: 16px;
+            filter: brightness(0) invert(1);
+        }
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            border-radius: 50px;
+            background: rgba(234, 179, 8, 0.12);
+            color: #B45309;
+            border: 1px solid rgba(234, 179, 8, 0.35);
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #D97706;
+            animation: pulse-dot 1.8s infinite ease-in-out;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.35); opacity: 0.55; }
+        }
+
+        .ios-content h1 {
+            font-size: clamp(1.85rem, 4vw, 2.75rem);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .ios-lead {
+            color: var(--text-muted);
+            font-size: 1.125rem;
+            line-height: 1.65;
+            margin-bottom: 36px;
+        }
+
+        .ios-actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+        }
+
+        .btn-notify {
+            gap: 10px;
+        }
+
+        .android-box {
+            margin-top: 40px;
+            padding-top: 28px;
+            border-top: 1px solid var(--glass-border);
+        }
+
+        .android-box h2 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .android-box p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+        }
+
+        .link-google-play {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .link-google-play:hover {
+            color: var(--primary-hover);
+            text-decoration: underline;
+        }
+
+        .ios-footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            padding: 0 24px;
+        }
+
+        @media (max-width: 576px) {
+            .ios-actions {
+                flex-direction: column;
+            }
+            .ios-actions .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="ios-status-page">
+    <header class="container">
+        <div class="nav-content">
+            <a href="/" class="logo">
+                <img src="/assets/app_icon.png" alt="Desafio Depósito Logo" class="logo-img" width="40" height="40">
+                Desafio Depósito
+            </a>
+            <a href="/" class="btn btn-secondary">Voltar ao Início</a>
+        </div>
+    </header>
+
+    <main class="ios-main">
+        <section class="ios-content" aria-labelledby="ios-status-title">
+            <div class="ios-icon-wrap">
+                <img src="/assets/app_icon.png" alt="Ícone do aplicativo Desafio Depósito" class="ios-app-logo" width="84" height="84" fetchpriority="high">
+                <span class="ios-apple-badge" aria-hidden="true">
+                    <img src="/assets/apple_logo.png" alt="" width="16" height="16">
+                </span>
+            </div>
+
+            <div class="status-pill" role="status">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span>App Store • Em Revisão Oficial</span>
+            </div>
+
+            <h1 id="ios-status-title">A versão para <span class="highlight">iPhone (iOS)</span> está quase pronta!</h1>
+            <p class="ios-lead">
+                O aplicativo <strong>Desafio Depósito</strong> já foi enviado para a Apple e está passando pela etapa final de revisão da <strong>App Store</strong>. Muito em breve o download estará liberado para o seu iPhone e iPad.
+            </p>
+
+            <div class="ios-actions">
+                <a href="mailto:geral@desafiodeposito.com?subject=Avise-me%20quando%20o%20Desafio%20Dep%C3%B3sito%20sair%20para%20iPhone%20(iOS)&body=Ol%C3%A1!%20Quero%20receber%20o%20link%20da%20App%20Store%20assim%20que%20o%20aplicativo%20Desafio%20Dep%C3%B3sito%20for%20aprovado%20para%20iOS." class="btn btn-primary btn-large btn-notify">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                    <span>Quero ser avisado no lançamento iOS</span>
+                </a>
+                <a href="/" class="btn btn-secondary btn-large">Conhecer mais sobre o App</a>
+            </div>
+
+            <div class="android-box">
+                <h2>Usa Android ou quer indicar para alguém?</h2>
+                <p>A versão para Android já está 100% disponível para download gratuito na loja oficial.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.desafio.deposito" target="_blank" rel="noopener noreferrer" class="link-google-play">
+                    <span>Baixar agora no Google Play</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="ios-footer">
+        <p>&copy; 2026 Desafio Depósito. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
